@@ -57,6 +57,11 @@ logo3.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 // start of Header
 let links = document.querySelectorAll('a');
 
+links.forEach(function(currentValue){
+  currentValue.style.color = "green"
+});
+
+
 let newLinks = Array.from(links)
 newLinks[0].textContent='Services',
 newLinks[1].textContent='Product',
@@ -64,6 +69,9 @@ newLinks[2].textContent='Vision',
 newLinks[3].textContent='Features',
 newLinks[4].textContent='About',
 newLinks[5].textContent='Contact'
+
+
+
 
 const button = document.querySelector('button')
 button.textContent = "Get Started"
