@@ -61,8 +61,26 @@ links.forEach(function(currentValue){
   currentValue.style.color = "green"
 });
 
+let endLink = document.createElement('a')
+endLink.textContent='endTest1'
+// console.log(endLink)
+
+let endLinkB = document.querySelector('nav')
+endLinkB.appendChild(endLink)
+// console.log(endLinkB)
+
+let startLink = document.createElement('a')
+startLink.textContent='startTest1'
+
+let startLinkB = document.querySelector('nav')
+startLinkB.prepend(startLink)
+
+
+// links.textcontent = ['Services', 'Product', 'Vision', 'Features', 'About', 'Contact']
+// console.log(links)
 
 let newLinks = Array.from(links)
+
 newLinks[0].textContent='Services',
 newLinks[1].textContent='Product',
 newLinks[2].textContent='Vision',
@@ -70,14 +88,11 @@ newLinks[3].textContent='Features',
 newLinks[4].textContent='About',
 newLinks[5].textContent='Contact'
 
-
-
-
 const button = document.querySelector('button')
 button.textContent = "Get Started"
 
 let headline = document.querySelector('h1') 
-headline.textContent = "DOM Is Awesome"
+headline.innerHTML = "DOM<br> Is<br> Awesome"
 
 // End of Header
 
@@ -97,7 +112,7 @@ newText[5].textContent = 'Contact'
 // Text Passages
 
 let content = document.querySelectorAll('p')
-console.log(content);
+// console.log(content);
 let newContent = Array.from(content)
 // console.log(newContent);
 newContent[0].textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
@@ -112,7 +127,7 @@ newContent[4].textContent = "Vision content elementum magna eros, ac posuere elv
 
 // Footer 
 
-newContent[5].textContent = "123 Way 456 Street \n Somewhere, USA",
+newContent[5].innerHTML = "123 Way 456 Street<br> Somewhere, USA",
 newContent[6].textContent = "1 (888) 888-8888",
 newContent[7].textContent = "sales@greatidea.io",
 newContent[8].textContent = "Copyright Great Idea! 2018"
