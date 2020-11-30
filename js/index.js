@@ -38,5 +38,60 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+
+//affixed all images
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let logo2 = document.querySelector('#cta-img')
+logo2.setAttribute('src', siteContent.cta['img-src'])
+
+let logo3 = document.querySelector('#middle-img');
+logo3.setAttribute('src', siteContent['main-content']['middle-img-src'])
+
+//nav bar
+const links = document.querySelectorAll('a');
+
+links.forEach((link) => {
+  link.style.color = 'grey'
+});
+
+linksArray = Array.from(links)
+linksArray[0].textContent = 'Services'
+linksArray[1].textContent = 'Product'
+linksArray[2].textContent = 'Vision'
+linksArray[3].textContent = 'Features'
+linksArray[4].textContent = 'About'
+linksArray[5].textContent = 'Contact'
+
+//header
+const header = document.querySelector('h1');
+const button = document.querySelector('button')
+
+header.innerHTML = 'Dom <br> is <br> awesome!'
+button.textContent = 'Get Started'
+
+//main content
+
+const heads = document.querySelectorAll('h4');
+
+const headsArray = Array.from(heads);
+headsArray[0].textContent = 'Features'
+headsArray[1].textContent = 'About'
+headsArray[2].textContent = 'Services'
+headsArray[3].textContent = 'Product'
+headsArray[4].textContent = 'Vision'
+headsArray[5].textContent = 'Contact'
+
+const headText = document.querySelectorAll('p');
+
+const headTextArray = Array.from(headText);
+headTextArray[0].textContent = siteContent['main-content']['features-content']
+headTextArray[1].textContent = siteContent['main-content']['about-content']
+headTextArray[2].textContent = siteContent['main-content']['services-content']
+headTextArray[3].textContent = siteContent['main-content']['product-content']
+headTextArray[4].textContent = siteContent['main-content']['vision-content']
+headTextArray[5].innerHTML = '123 Way 456 Street<br> Somewhere, USA'
+headTextArray[6].textContent = siteContent['contact']['phone']
+headTextArray[7].textContent = siteContent['contact']['email']
+headTextArray[8].textContent = siteContent['footer']['copyright']
